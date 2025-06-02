@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HTML CSS Review</title>
-  <link rel="stylesheet" href="styles.css">
-  <script src="script.js" defer></script>
+  <!-- <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script> -->
 </head>
 <body>
   
@@ -31,16 +31,22 @@
     }
   </style>
   
-  <button title="blue" class="blue-button">
+  <button title="blue" class="blue-button" onclick="buttonAlert(this)">
     hello
   </button>
   
   <p>
     Paragraph of 
-    <button title="yellow" class="yellow-button">
+    <button title="yellow" class="yellow-button" onclick="buttonAlert(this)">
       hello
     </button> 
     text
   </p>
+
+  <script>
+    function buttonAlert(button) {
+      alert(`Hello, from the ${button.title} button!`);
+    }
+  </script>
 </body>
 </html>
